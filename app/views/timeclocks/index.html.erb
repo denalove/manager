@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Timeclocks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Time in</th>
+      <th>Time out break</th>
+      <th>Time in break</th>
+      <th>Time out lunch</th>
+      <th>Time in lunch</th>
+      <th>Time out</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @timeclocks.each do |timeclock| %>
+      <tr>
+        <td><%= timeclock.date %></td>
+        <td><%= timeclock.time_in %></td>
+        <td><%= timeclock.time_out_break %></td>
+        <td><%= timeclock.time_in_break %></td>
+        <td><%= timeclock.time_out_lunch %></td>
+        <td><%= timeclock.time_in_lunch %></td>
+        <td><%= timeclock.time_out %></td>
+        <td><%= timeclock.user_id %></td>
+        <td><%= link_to 'Show', timeclock %></td>
+        <td><%= link_to 'Edit', edit_timeclock_path(timeclock) %></td>
+        <td><%= link_to 'Destroy', timeclock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Timeclock', new_timeclock_path %>

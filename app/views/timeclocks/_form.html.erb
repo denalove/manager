@@ -1,0 +1,49 @@
+<%= form_for(@timeclock) do |f| %>
+  <% if @timeclock.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@timeclock.errors.count, "error") %> prohibited this timeclock from being saved:</h2>
+
+      <ul>
+      <% @timeclock.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :time_in %><br>
+    <%= f.time_select :time_in %>
+  </div>
+  <div class="field">
+    <%= f.label :time_out_break %><br>
+    <%= f.time_select :time_out_break %>
+  </div>
+  <div class="field">
+    <%= f.label :time_in_break %><br>
+    <%= f.time_select :time_in_break %>
+  </div>
+  <div class="field">
+    <%= f.label :time_out_lunch %><br>
+    <%= f.time_select :time_out_lunch %>
+  </div>
+  <div class="field">
+    <%= f.label :time_in_lunch %><br>
+    <%= f.time_select :time_in_lunch %>
+  </div>
+  <div class="field">
+    <%= f.label :time_out %><br>
+    <%= f.time_select :time_out %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

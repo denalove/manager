@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @timeclock.date %>
+</p>
+
+<p>
+  <strong>Time in:</strong>
+  <%= @timeclock.time_in %>
+</p>
+
+<p>
+  <strong>Time out break:</strong>
+  <%= @timeclock.time_out_break %>
+</p>
+
+<p>
+  <strong>Time in break:</strong>
+  <%= @timeclock.time_in_break %>
+</p>
+
+<p>
+  <strong>Time out lunch:</strong>
+  <%= @timeclock.time_out_lunch %>
+</p>
+
+<p>
+  <strong>Time in lunch:</strong>
+  <%= @timeclock.time_in_lunch %>
+</p>
+
+<p>
+  <strong>Time out:</strong>
+  <%= @timeclock.time_out %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @timeclock.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_timeclock_path(@timeclock) %> |
+<%= link_to 'Back', timeclocks_path %>
