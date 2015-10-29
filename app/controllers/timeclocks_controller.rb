@@ -69,6 +69,6 @@ class TimeclocksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def timeclock_params
-      params.require(:timeclock).permit(:date, :time_in, :time_out_break, :time_in_break, :time_out_lunch, :time_in_lunch, :time_out, :user_id)
+      params.require(:timeclock).permit(:date, :time_in, :time_out_lunch, :time_in_lunch, :time_out, :user_id)
     end
 end
