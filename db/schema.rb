@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151028211720) do
+ActiveRecord::Schema.define(version: 20151029032111) do
 
   create_table "timeclocks", force: :cascade do |t|
     t.date     "date"
@@ -29,8 +29,18 @@ ActiveRecord::Schema.define(version: 20151028211720) do
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "employee_number"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "street"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "zip"
+    t.string   "home_phone"
+    t.string   "cell_phone"
+    t.float    "hourly_rate"
   end
 
 end
