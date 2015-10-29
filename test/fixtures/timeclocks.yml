@@ -3,8 +3,6 @@
 one:
   date: 2015-10-28
   time_in: 2015-10-28 17:17:20
-  time_out_break: 2015-10-28 17:17:20
-  time_in_break: 2015-10-28 17:17:20
   time_out_lunch: 2015-10-28 17:17:20
   time_in_lunch: 2015-10-28 17:17:20
   time_out: 2015-10-28 17:17:20
@@ -13,8 +11,6 @@ one:
 two:
   date: 2015-10-28
   time_in: 2015-10-28 17:17:20
-  time_out_break: 2015-10-28 17:17:20
-  time_in_break: 2015-10-28 17:17:20
   time_out_lunch: 2015-10-28 17:17:20
   time_in_lunch: 2015-10-28 17:17:20
   time_out: 2015-10-28 17:17:20

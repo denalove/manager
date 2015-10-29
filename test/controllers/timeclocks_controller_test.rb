@@ -18,7 +18,7 @@ class TimeclocksControllerTest < ActionController::TestCase
 
   test "should create timeclock" do
     assert_difference('Timeclock.count') do
-      post :create, timeclock: { date: @timeclock.date, time_in: @timeclock.time_in, time_in_break: @timeclock.time_in_break, time_in_lunch: @timeclock.time_in_lunch, time_out: @timeclock.time_out, time_out_break: @timeclock.time_out_break, time_out_lunch: @timeclock.time_out_lunch, user_id: @timeclock.user_id }
+      post :create, timeclock: { date: @timeclock.date, time_in: @timeclock.time_in, time_in_lunch: @timeclock.time_in_lunch, time_out: @timeclock.time_out, time_out_lunch: @timeclock.time_out_lunch, user_id: @timeclock.user_id }
     end
 
     assert_redirected_to timeclock_path(assigns(:timeclock))
@@ -35,7 +35,7 @@ class TimeclocksControllerTest < ActionController::TestCase
   end
 
   test "should update timeclock" do
-    patch :update, id: @timeclock, timeclock: { date: @timeclock.date, time_in: @timeclock.time_in, time_in_break: @timeclock.time_in_break, time_in_lunch: @timeclock.time_in_lunch, time_out: @timeclock.time_out, time_out_break: @timeclock.time_out_break, time_out_lunch: @timeclock.time_out_lunch, user_id: @timeclock.user_id }
+    patch :update, id: @timeclock, timeclock: { date: @timeclock.date, time_in: @timeclock.time_in, time_in_lunch: @timeclock.time_in_lunch, time_out: @timeclock.time_out, time_out_lunch: @timeclock.time_out_lunch, user_id: @timeclock.user_id }
     assert_redirected_to timeclock_path(assigns(:timeclock))
   end
 

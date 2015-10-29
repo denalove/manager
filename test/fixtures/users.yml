@@ -1,9 +1,27 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  email: MyString
+  first_name: Ed 
+  last_name: Toro
+  employee_number: 1111
+  email: valid@email.co
+  street: 11 Street St.
+  city: Miami
+  state: FL
+  zip: 33434
+  home_phone: (561)111-1111
+  cell_phone: 239-111-1111
+  hourly_rate: 100
 
 two:
-  name: MyString
-  email: MyString
+  first_name: Bill 
+  last_name: Clinton
+  employee_number: 1212
+  email: bill@usa.us 
+  street: 11 Street St.
+  city: orlando
+  state: florida
+  zip: 33434
+  home_phone: 1 (561) 111-1111
+  cell_phone: 239 - 111 - 1111
+  hourly_rate: 100
