@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151029035839) do
+ActiveRecord::Schema.define(version: 20151030001631) do
 
   create_table "timeclocks", force: :cascade do |t|
     t.date     "date"
@@ -38,6 +38,10 @@ ActiveRecord::Schema.define(version: 20151029035839) do
     t.string   "home_phone"
     t.string   "cell_phone"
     t.float    "hourly_rate"
+    t.string   "username"
+    t.string   "password_digest"
   end
+
+  add_index "users", ["username"], name: "index_users_on_username", unique: true
 
 end
