@@ -1,10 +1,11 @@
 class TimeclocksController < ApplicationController
   before_action :set_timeclock, only: [:show, :edit, :update, :destroy]
+  before_action :require_logged_in
 
   # GET /timeclocks
   # GET /timeclocks.json
   def index
-    @timeclocks = Timeclock.all
+    @timeclocks = current_user.timeclocks.all
   end
 
   # GET /timeclocks/1
@@ -14,7 +15,7 @@ class TimeclocksController < ApplicationController
 
   # GET /timeclocks/new
   def new
-    @timeclock = Timeclock.new
+    @timeclock = current_user.timeclocks.new
   end
 
   # GET /timeclocks/1/edit
@@ -24,7 +25,7 @@ class TimeclocksController < ApplicationController
   # POST /timeclocks
   # POST /timeclocks.json
   def create
-    @timeclock = Timeclock.new(timeclock_params)
+    @timeclock = current_user.timeclocks.new(timeclock_params)
 
     respond_to do |format|
       if @timeclock.save
@@ -64,7 +65,7 @@ class TimeclocksController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_timeclock
-      @timeclock = Timeclock.find(params[:id])
+      @timeclock = current_user.timeclock.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
